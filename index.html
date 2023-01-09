@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bored</title>
+  <script type="text/javascript" src="https://rawcdn.githack.com/adactio/FitText.js/585b39b9099343a981d4e26789d8851874a96858/fittext.js"></script>
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    #parent {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    #child {
+      top: 50vh;
+      position: relative;
+      text-align: center;
+      transform: translateY(-50%);
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent">
+    <div id="child">
+      
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    var choices = [
+      'AZUL',
+      'RES ARCANA',
+      'SUSHI GO PARTY',
+      'PRETTY CLEVER',
+      'VOYAGES',
+      'DEEP SEA ADVENTURE',
+      'POINT SALAD',
+      'SUMMER CAMP',
+      'HARRY POTTER',
+      'TERRAFORMING MARS: ARES EXPEDITION',
+      'GIZMOS',
+      'RADLANDS',
+      'ONITAMA',
+      'HARDBACK',
+      'WINDMAKERS',
+      'REGICIDE',
+      'FOX IN THE FOREST',
+      'JEKYL AND HYDE',
+    ];
+
+    // var onlineChoices = [
+    //   DOMINION
+    //   CASTLES OF BURGUNDY
+    //   UNDERWATER CITIES
+
+    // ]
+    
+    var chosenEntry = choices[Math.floor(Math.random()*choices.length)].toUpperCase();
+    document.getElementById('child').innerText = chosenEntry;
+    
+    window.fitText(document.getElementById('child'), chosenEntry.length/12);
+  </script>
+  
+</body>
+</html>
